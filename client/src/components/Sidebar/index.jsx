@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Tab, Nav, TabContainer, NavItem, NavLink, TabContent, TabPane, Button, Modal } from 'react-bootstrap'
+import { Nav, TabContainer, NavItem, NavLink, TabContent, TabPane, Button, Modal } from 'react-bootstrap'
 import Conversations from '../Conversations'
 import Contacts from '../Contacts'
 import NewContactModal from '../NewContactModal'

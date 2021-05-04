@@ -2,12 +2,6 @@ var cors = require("cors");
 const options = { cors: { origin: "*" } };
 const io = require('socket.io')(5000, options)
 
-// io.use(cors({
-//   origin: ["http://localhost:3000/"],
-//   methods: ["GET", "POST", "PUT", "DELETE"],
-//   credentials: true
-// }));
-
 io.on('connection', socket => {
   const id = socket.handshake.query.id
   socket.join(id)

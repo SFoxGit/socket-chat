@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap'
+import { Button, Container, Form, Row } from 'react-bootstrap'
 import {v4 as uuidV4} from 'uuid'
 
 export default function Login({setId}) {

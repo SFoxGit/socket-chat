@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, FormCheck, FormControl, FormGroup, FormLabel, Modal, ModalBody } from 'react-bootstrap'
+import { Button, Form, FormCheck, FormGroup, ModalBody } from 'react-bootstrap'
 import ModalHeader from 'react-bootstrap/esm/ModalHeader';
 import { useContacts } from '../../contexts/ContactsProvider';
 import {useConversations} from '../../contexts/ConversationsProvider'

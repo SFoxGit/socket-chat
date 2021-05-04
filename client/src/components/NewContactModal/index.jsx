@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Button, Form, FormControl, FormGroup, FormLabel, Modal, ModalBody } from 'react-bootstrap'
+import { Button, Form, FormControl, FormGroup, FormLabel, ModalBody } from 'react-bootstrap'
 import ModalHeader from 'react-bootstrap/esm/ModalHeader';
 import {useContacts} from '../../contexts/ContactsProvider'
 
