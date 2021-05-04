@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
+import {v4 as uuidV4} from 'uuid'
 
 export default function Login({setId}) {
   const idRef = useRef();
@@ -7,6 +8,9 @@ export default function Login({setId}) {
     e.preventDefault();
     setId(idRef.current.value)
 
+  }
+  function createNewId() {
+    setId(uuidV4())
   }
 
   return (
@@ -19,7 +23,7 @@ export default function Login({setId}) {
               <Form.Control type="text" ref={idRef} required></Form.Control>
             </Form.Group>
             <Button type="submit" className="mr-2">Login</Button>
-            <Button variant="secondary">Create A New ID</Button>
+            <Button onClick={createNewId} variant="secondary">Create A New ID</Button>
           </Form>
         </Row>
       </Container>

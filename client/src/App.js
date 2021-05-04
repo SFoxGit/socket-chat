@@ -6,6 +6,7 @@ function App() {
   const [id, setId] = useState()
   return (
     <>
+    {id}
     <Login setId={setId} />
     </>
   );
