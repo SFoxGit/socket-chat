@@ -1,8 +1,11 @@
-import logo from './logo.svg';
+import React from 'react';
+import Login from './components/Login';
 
 function App() {
   return (
-    
+    <>
+    <Login />
+    </>
   );
 }
 
