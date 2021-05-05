@@ -17,13 +17,13 @@ export default function Sidebar({ id }) {
     setModalOpen(false)
   }
   return (
-    <div style={{ width: '250px' }} className="d-flex flex-column">
+    <div style={{ width: '250px', }} className="d-flex flex-column">
       <TabContainer activeKey={activeKey} onSelect={setActiveKey}>
-        <Nav variant="tabs" className="justify-content-center">
-          <NavItem>
+        <Nav style={{backgroundColor: 'lightgray'}} variant="tabs" className="justify-content-left">
+          <NavItem className="rounded-left font-weight-bold border-top border-left border-dark" style={conversationsOpen ? {backgroundColor: 'white'} : {backgroundColor: 'lightgray'}}>
             <NavLink eventKey={CONVERSATIONS_KEY}>Conversations</NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem className="rounded-right font-weight-bold border-top border-right border-left border-dark" style={!conversationsOpen ? {backgroundColor: 'white'} : {backgroundColor: 'lightgray'}}>
             <NavLink eventKey={CONTACTS_KEY}>Contacts</NavLink>
           </NavItem>
         </Nav>
@@ -43,7 +43,7 @@ export default function Sidebar({ id }) {
         <div className="p-2 border-top border-right small">
           Your Id: <span className="text-muted">{id}</span>
         </div>
-        <Button onClick={() => setModalOpen(true)} className="rounded-0">
+        <Button onClick={() => setModalOpen(true)} className="rounded-0 btn-danger">
           New {conversationsOpen ? 'Conversation' : 'Contact'}
         </Button>
       </TabContainer>
