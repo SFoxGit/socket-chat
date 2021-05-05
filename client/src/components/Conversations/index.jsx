@@ -10,6 +10,7 @@ export default function Conversations() {
         <ListGroupItem 
         key={index}
         action
+        className="w-100"
         onClick={() => selectedConversationIndex(index)}
         active={conversation.selected}
         >

@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import { Button, Form, FormControl, FormGroup, InputGroup } from 'react-bootstrap'
-import { useConversations } from '../../contexts/ConversationsProvider'
+import { useConversations } from '../../contexts/ConversationsProvider';
+import './style.css'
 
 export default function OpenConversation() {
   const [text, setText] = useState('')
@@ -19,7 +20,7 @@ export default function OpenConversation() {
 
   return (
     <div className="d-flex flex-column flex-grow-1">
-      <div className="flex-grow-1 overflow-auto">
+      <div className="flex-grow-1 overflow-auto convo">
         <div className=" d-flex flex-column align-items-start justify-content-end px-3">
           {selectedConversation.messages.map((message, index) => {
             const lastMessage = selectedConversation.messages.length - 1 === index
@@ -29,14 +30,14 @@ export default function OpenConversation() {
                 key={index}
                 className={`my-1 d-flex flex-column ${message.fromMe ? 'align-self-end' : ''}`}
               >
-                <div className={`rounded-top px-2 py-1 ${message.fromMe ? 'rounded-left bg-primary text-white mr-4' : 'border rounded-right ml-4'}`}>{message.text}</div>
+                <div className={`rounded-top px-2 py-1 ${message.fromMe ? 'rounded-left bg-primary text-white mr-4' : 'border bg-white rounded-right ml-4'}`}>{message.text}</div>
                 <div className={`text-muted small ${message.fromMe ? 'text-right' : ''}`}>{message.fromMe ? 'You' : message.senderName}</div>
               </div>
             )
           })}
         </div>
       </div>
-      <Form onSubmit={handleSubmit}>
+      <Form className="convo" onSubmit={handleSubmit}>
         <FormGroup className="m-2">
           <InputGroup>
             <FormControl
