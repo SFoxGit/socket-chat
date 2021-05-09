@@ -5,6 +5,7 @@ import useLocalStorage from './utils/useLocalStorage';
 import { ContactsProvider } from './contexts/ContactsProvider';
 import { ConversationsProvider } from './contexts/ConversationsProvider';
 import { SocketProvider } from './contexts/SocketProvider';
+import Header from './components/Header';
 
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
     <SocketProvider id={id}>
       <ContactsProvider>
         <ConversationsProvider id={id}>
-          <Dashboard id={id} />
+          <>
+            <Header id={id} />
+            <Dashboard id={id} />
+          </>
         </ConversationsProvider>
       </ContactsProvider>
     </SocketProvider>

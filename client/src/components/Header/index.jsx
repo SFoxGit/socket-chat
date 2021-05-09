@@ -4,7 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap'
 function Header() {
 
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top">
+    <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top" className="bg-dark" style={{height: '6vh'}}>
       <Navbar.Brand className="brand" href="/">SocketChat</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
