@@ -11,7 +11,7 @@ function Header() {
         <Nav className="ml-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-          <Nav.Link href="/login">Logout</Nav.Link>
+          <Nav.Link onClick={() => localStorage.clear()} href="/login">Logout</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
